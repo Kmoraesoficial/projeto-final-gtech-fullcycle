@@ -1,0 +1,115 @@
+version: '3.8' 
+
+services: 
+  # Banco de Dados PostgreSQL 
+  postgres: 
+    image: postgres:15-alpine
+    container_name: biblioteca_db 
+    restart: always 
+    environment: 
+      POSTGRES_DB: ${DB_NAME:-biblioteca_db} 
+      POSTGRES_USER: ${DB_USER:-biblioteca_user} 
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-biblioteca_pass123} 
+    ports: 
+      - "5432:5432" 
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data 
+    networks: 
+      - biblioteca_network 
+    healthcheck:  
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-biblioteca_user}"]
+      interval: 5s 
+      timeout: 5s 
+      retries: 5
+  # API da Biblioteca 
+  api: 
+    build: 
+        context: . 
+        dockerfile: Dockerfile 
+    container_name: biblioteca_api 
+    restart: always 
+    ports:
+      - "3000:3000" 
+    environment: 
+      NODE_ENV: production 
+      PORT: 3000 
+      DB_HOST: postgres 
+      DB_PORT: 5432 
+      DB_NAME: ${DB_NAME:-biblioteca_db} 
+      DB_USER: ${DB_USER:-biblioteca_user} 
+      DB_PASSWORD: ${DB_PASSWORD:-biblioteca_pass123} 
+    depends_on: 
+      postgres: 
+          condition: service_healthy 
+    networks: 
+      - biblioteca_network 
+networks: 
+  biblioteca_network: 
+    driver: bridge 
+volumes: 
+  postgres_data:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

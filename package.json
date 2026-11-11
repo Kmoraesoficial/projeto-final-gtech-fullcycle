@@ -1,0 +1,20 @@
+{
+  "name": "biblioteca-app",
+  "version": "1.0.0",
+  "description": "API de Sistema de Biblioteca e Empréstimos",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.15"
+  }
+
+}
