@@ -123,5 +123,5 @@ npm run test:watch
 
 A divisão de responsabilidades detalhada está registrada no arquivo [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
 
-- **Karina Moraes**: Domínio, Casos de Uso, Testes Unitários, ADR e Especificação OpenAPI.
-- **Kevyn**: Infraestrutura, Banco de Dados PostgreSQL, Docker Compose, CI/CD (GitHub Actions) e Testes de Carga (k6).
+- **Karina Ferreira**: Domínio, Casos de Uso, Testes Unitários, ADR e Especificação OpenAPI.
+- **Kevyn Ferreira**: Infraestrutura, Banco de Dados PostgreSQL, Docker Compose, CI/CD (GitHub Actions) e Testes de Carga (k6).
