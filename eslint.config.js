@@ -10,7 +10,9 @@ export default tseslint.config(
       'prisma/migrations/**', 
       'jest.config.cjs',
       'eslint.config.js',
-      'src/generated/**' 
+      'src/generated/**',
+      'src/**/*.js',    
+      'src/*.js'      
     ],
   },
   js.configs.recommended,
@@ -18,7 +20,7 @@ export default tseslint.config(
   {
     languageOptions: {
       globals: {
-        ...globals.node, 
+        ...globals.node,
       },
     },
     rules: {
