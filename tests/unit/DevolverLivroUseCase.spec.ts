@@ -1,5 +1,6 @@
-import { DevolverLivroUseCase } from '../../src/use-cases/DevolverLivroUseCase';
-import { Emprestimo } from '../../src/domain/Emprestimo';
+import { DevolverLivroUseCase } from '../../src/use-cases/DevolverLivroUseCase.js';
+import { jest } from '@jest/globals';
+import { Emprestimo } from '../../src/domain/Emprestimo.js';
 
 describe('DevolverLivroUseCase', () => {
   it('deve realizar a devolução do livro e atualizar a disponibilidade', async () => {

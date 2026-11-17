@@ -1,4 +1,4 @@
-import { LivroRepository, EmprestimoRepository } from '../domain/repositories';
+import { LivroRepository, EmprestimoRepository } from '../domain/repositories.js';
 
 export class DevolverLivroUseCase {
   constructor(

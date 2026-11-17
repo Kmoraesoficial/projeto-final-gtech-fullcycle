@@ -1,5 +1,5 @@
-import { RealizarEmprestimoUseCase } from '../../src/use-cases/RealizarEmprestimoUseCase';
-
+import { RealizarEmprestimoUseCase } from '../../src/use-cases/RealizarEmprestimoUseCase.js';
+import { jest } from '@jest/globals';
 describe("RealizarEmprestimoUseCase", () => {
   it("deve realizar empréstimo de livro disponível com sucesso", async () => {
     const mockLivroRepo = {

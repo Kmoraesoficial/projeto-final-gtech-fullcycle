@@ -1,6 +1,5 @@
-import { Emprestimo } from '../domain/Emprestimo';
-import { Livro } from '../domain/Livro';
-import { LivroRepository, EmprestimoRepository } from '../domain/repositories';
+import { Emprestimo } from '../domain/Emprestimo.js';
+import { LivroRepository, EmprestimoRepository } from '../domain/repositories.js';
 
 
 export class RealizarEmprestimoUseCase {

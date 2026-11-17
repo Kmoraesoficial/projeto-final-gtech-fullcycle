@@ -1,5 +1,5 @@
-import { Livro } from './Livro';
-import { Emprestimo } from './Emprestimo';
+import { Livro } from './Livro.js';
+import { Emprestimo } from './Emprestimo.js';
 
 export interface LivroRepository {
   buscarPorId(id: string): Promise<Livro | null>;
@@ -8,7 +8,7 @@ export interface LivroRepository {
 
 export interface EmprestimoRepository {
   salvar(emprestimo: Emprestimo): Promise<void>;
-  buscarPorId(id: string): Promise<Emprestimo | null>; // ← Adicionado
-  atualizar(emprestimo: Emprestimo): Promise<void>;    // ← Adicionado
+  buscarPorId(id: string): Promise<Emprestimo | null>;
+  atualizar(emprestimo: Emprestimo): Promise<void>;   
   possuiPendencias(usuarioId: string): Promise<boolean>;
 }
