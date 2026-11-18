@@ -11,7 +11,7 @@ export default tseslint.config(
       'jest.config.cjs',
       'eslint.config.js',
       'src/generated/**',
-      '**/*.js' // <-- AQUI! Ignora QUALQUER arquivo .js em qualquer pasta
+      '**/*.js'
     ],
   },
   js.configs.recommended,
