@@ -1,6 +1,7 @@
 import request from 'supertest';
 import { PrismaClient } from '../../src/generated/prisma/client.js';
 import { buildApp } from '../../src/infrastructure/repositories/http/app.js';
+import { describe, it, expect, beforeAll, afterAll } from '@jest/globals';
 import { PrismaPg } from '@prisma/adapter-pg';
 import pg from 'pg';
 import 'dotenv/config';
