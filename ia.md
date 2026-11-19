@@ -68,6 +68,33 @@ Todo o código, arquitetura e documentação gerados com auxílio de IA foram ri
 
 ---
 
+### 🔹 Prompt 6: Configuração do Prisma 7 (Mudanças de API e Driver Adapters)
+* **Responsável:** Kevyn  
+* **Objetivo:** Configurar o ORM Prisma na versão mais recente para conectar ao PostgreSQL.
+* **Prompt Utilizado:**
+  > *"Como configurar o Prisma Client na versão 7 para conectar ao PostgreSQL em um projeto ESM com TypeScript? Como resolver o erro de `driver adapter` e o erro de falta de `prisma.config.ts`?"*
+* **Resultado & Adaptação:** Configuração do arquivo `prisma.config.ts`, geração do Client na pasta `src/generated` e implementação do adaptador `@prisma/adapter-pg` na instanciação do banco.
+
+---
+
+### 🔹 Prompt 7: Configuração do Jest com ES Modules (ESM) e TypeScript
+* **Responsável:** Kevyn  
+* **Objetivo:** Fazer os testes unitários e de integração rodarem sem conflitos de importação.
+* **Prompt Utilizado:**
+  > *"Como configurar o Jest em um projeto Node.js puramente ESM (com `"type": "module"` no package.json)? Como resolver o erro `ReferenceError: jest is not defined` e o erro de mapeamento de módulos no Supertest?"*
+* **Resultado & Adaptação:** Configuração do `jest.config.cjs` com `ts-jest/presets/default-esm`, injeção de globais e ajuste do import do `@jest/globals` nos arquivos de teste.
+
+---
+
+### 🔹 Prompt 8: Otimização do Dockerfile para Prisma e Build
+* **Responsável:** Kevyn  
+* **Objetivo:** Resolver falhas de build da imagem Docker.
+* **Prompt Utilizado:**
+  > *"Como criar um Dockerfile multi-stage para uma aplicação Node.js com Prisma que precisa gerar os arquivos do Client durante o build e ignorar a falta da variável DATABASE_URL no momento da geração?"*
+* **Resultado & Adaptação:** Criação do Dockerfile com a passagem de uma `DATABASE_URL` fictícia na etapa de build (`builder`) para que o Prisma pudesse gerar os tipos sem quebrar o CI/CD.
+
+---
+
 ## 3. Validação e Responsabilidade
 
 A dupla atesta que possui pleno conhecimento e domínio de todo o código e documentação presentes neste repositório. 
